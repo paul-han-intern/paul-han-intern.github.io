@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Health</title>
+  <link rel="stylesheet" href="source-manager.css">
+</head>
+<body>
+  <div id="side-menu">
+    <div id="user-profile"></div>
+    <ul id="side-menu-nav">
+      <li class="side-menu-nav-item active"><a href="landing-page.html">Data</a></li>
+        <ul class="side-menu-sub-menu">
+          <li class="side-menu-sub-menu-item"><a href="data-health.html">Data Health</a></li>
+          <li class="side-menu-sub-menu-item"><a href="project-manager.html">Project Manager</a></li>
+          <li class="side-menu-sub-menu-item"><a href="source-manager.html">Source Manager</a></li>
+        </ul>
+      <li class="side-menu-nav-item">Analytics</li>
+      <li class="side-menu-nav-item">Admin</li>
+    </ul>
+  </div>
+  <div id="menu-icon">
+    <div class="menu-icon-bar"></div>
+    <div class="menu-icon-bar"></div>
+    <div class="menu-icon-bar"></div>
+  </div>
+  <div id="scoreboard">
+    <div class="count-row">
+      <div class="count-label">Total Sources
+      </div><div class="count-label">Total Attributes
+      </div><div class="count-label">Total Records
+      </div><div class="count-label">Total Projects</div>
+    </div>
+    <div class="count-row">
+      <div class="count-value">
+      </div><div class="count-value">
+      </div><div class="count-value">
+      </div><div class="count-value"></div>
+    </div>
+  </div>
+  <div id="recent-activity">
+    <p class="header">Recent Activity</p>
+    <div>
+      <div class="logged-activity">
+        <p class="source-name">Allstars.csv</p>
+        <p class="activity-description">Uploaded by Adam</p>
+      </div>
+      <div class="logged-activity">
+        <p class="source-name">ManagerAwards.csv</p>
+        <p class="activity-description">Updated by James</p>
+      </div>
+      <div class="logged-activity">
+        <p class="source-name">PlayerAwards.csv</p>
+        <p class="activity-description">Removed by Cameron</p>
+      </div>
+      <div class="logged-activity">
+        <p class="source-name">Allstars.csv</p>
+        <p class="activity-description">Uploaded by Adam</p>
+      </div>
+      <div class="logged-activity">
+        <p class="source-name">ManagerAwards.csv</p>
+        <p class="activity-description">Updated by James</p>
+      </div>
+      <div class="logged-activity">
+        <p class="source-name">PlayerAwards.csv</p>
+        <p class="activity-description">Removed by Cameron</p>
+      </div>
+    </div>
+  </div>
+  <div id="source-list">
+    <div id="list-options">
+      <button id="upload-source-button">New Source</button>
+    </div>
+    <div class="header">
+      <div class="table-cell">Name
+      </div><div class="table-cell">Date Modified
+      </div><div class="table-cell">Data Source Type
+      </div><div class="table-cell">Size
+      </div><div class="table-cell"># of Fields
+      </div><div class="table-cell"># of Records</div>
+    </div>
+    <div id="list-body"></div>
+  </div>
+  <div id="upload-file-overlay">
+    <div id="upload-file-menu">
+      <div class="header">Add New Source</div>
+      <input id="file" name="file" type="file">
+      <label id="file-label" for="file">Choose a file</label>
+    </div>
+  </div>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="source-manager.js"></script>
+</body>
+</html>

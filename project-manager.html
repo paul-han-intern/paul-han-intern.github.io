@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Manager</title>
+  <link rel="stylesheet" href="project-manager.css">
+</head>
+<body>
+  <div id="menu-icon">
+    <div class="menu-icon-bar"></div>
+    <div class="menu-icon-bar"></div>
+    <div class="menu-icon-bar"></div>
+  </div>
+  <div id="side-menu">
+    <div id="user-profile"></div>
+    <ul id="side-menu-nav">
+      <li class="side-menu-nav-item active"><a href="landing-page.html">Data</a></li>
+        <ul class="side-menu-sub-menu">
+          <li class="side-menu-sub-menu-item"><a href="data-health.html">Data Health</a></li>
+          <li class="side-menu-sub-menu-item"><a href="project-manager.html">Project Manager</a></li>
+          <li class="side-menu-sub-menu-item"><a href="source-manager.html">Source Manager</a></li>
+        </ul>
+      <li class="side-menu-nav-item">Analytics</li>
+      <li class="side-menu-nav-item">Admin</li>
+    </ul>
+  </div>
+  <div id="container">
+    <div id="project-list">
+      <div id="project-list-header">
+        <div class="project-list-heading active">Current</div>
+        <div class="project-list-heading">New</div>
+      </div>
+      <div id="project-list-search"><input id="project-list-search-box" type="search" placeholder="&#128270; Search..."></div>
+      <div id="scrollbar-positioner"><div id="project-list-body"></div></div>
+    </div>
+    <div id="project-view">
+      <div id="overview-values">
+        <div class="count-box">
+          <p class="count-value"></p>
+          <p class="count-label">Total Projects</p>
+        </div><div class="count-box">
+          <p class="count-value"></p>
+          <p class="count-label">Projects Enriched</p>
+        </div><div class="count-box">
+          <p class="count-value"></p>
+          <p class="count-label">Enrichment In Progress</p>
+        </div><div class="count-box">
+          <p class="count-value"></p>
+          <p class="count-label">Average Enriched Fields</p>
+        </div>
+      </div>
+      <table id="project-table">
+        <thead id="project-table-head">
+          <tr>
+            <th><div>Name</div></th>
+            <th><div>Last Modified</div></th>
+            <th><div>Pre-enrichment Data Health</div></th>
+            <th><div>Times Enriched</div></th>
+            <th><div>Post-enrichment Data Health</div></th>
+            <th><div>Progress</div></th>
+          </tr>
+        </thead>
+        <tbody id="project-table-body"></tbody>
+      </table>
+      <div id="scroll-fade"></div>
+    </div>
+  </div>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="project-manager.js"></script>
+</body>
+</html>

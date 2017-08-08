@@ -1,0 +1,153 @@
+body, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #12385F;
+  font-family: Arial;
+}
+
+#carrot-container {
+  color: #FFF;
+  font-size: 16px;
+  padding: 5px;
+}
+
+#categories {
+  cursor: pointer;
+}
+
+.group-detail-box {
+  padding: 10px;
+  box-shadow: 0 0 0.5px #DDD;
+}
+
+.group-detail {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.group-detail b {
+  color: #66C2EA;
+  margin-right: 10px;
+}
+
+.group-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#treemap-container {
+  background-color: #1D4D7D;
+  border-radius: 5px 5px 0 0;
+  display: inline-block;
+  height: 80vh;
+  margin-left: 10vh;
+  margin-top: 10vh;
+  vertical-align: top;
+  width: 60vw;
+}
+
+#right-col {
+  background-color: #0D2945;
+  border-radius: 5px;
+  color: #EEE;
+  display: inline-block;
+  height: 80vh;
+  margin-left: 10vh;
+  margin-top: 10vh;
+  overflow-y: scroll;
+  vertical-align: top;
+  width: calc(40vw - 30vh);
+}
+
+#right-col::-webkit-scrollbar {
+  width: 0;
+}
+
+/* -------------
+  Side Menu
+------------- */
+#menu-icon {
+  background-color: #265A93;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #000;
+  cursor: pointer;
+  left: 10px;
+  outline: 0;
+  padding: 5px 5px 0 5px;
+  position: absolute;
+  top: 10px;
+}
+
+.menu-icon-bar {
+  background-color: #FFF;
+  height: 5px;
+  margin-bottom: 5px;
+  width: 25px;
+}
+
+#side-menu {
+  background-color: #23507B;
+  color: #EEE;
+  left: -200px;
+  padding-top: 30px;
+  position: absolute;
+  top: 0;
+  width: 200px;
+  z-index: 1;
+}
+
+#side-menu-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu-nav-item {
+  border-bottom: 0.5px dotted #777;
+  border-top: 0.5px dotted #777;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.side-menu-nav-item > a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.side-menu-nav-item:hover {
+  color: #029AD8;
+}
+
+.side-menu-nav-item.active {
+  padding-right: 7px;
+  border-right: 3px solid #FFF;
+}
+
+.side-menu-sub-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu-sub-menu-item {
+  padding: 10px;
+  background-color: #1C3F61;
+}
+
+.side-menu-sub-menu-item > a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+#user-profile {
+  background-color: #DDD;
+  border-radius: 50px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 30px;
+  width: 100px;
+}

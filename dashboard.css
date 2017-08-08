@@ -1,0 +1,470 @@
+body, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial;
+}
+
+/* -------------
+  General
+------------- */
+.chart-heading {
+  color: #FFF;
+  font-size: 20px; /* Changing this will mess up positioning for the geo-chart. */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px; /* Changing this will mess up positioning for the geo-chart */
+}
+
+#left-container {
+  background-color: #12385F;
+  height: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+#right-container {
+  background-color: #12385F;
+  height: 0;
+  right: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.tooltip-title {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.tooltip {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 12px;
+  opacity: 0;
+  padding: 5px;
+  pointer-events: none;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+}
+
+.tooltip table {
+  table-layout: fixed;
+}
+
+.tooltip tr td {
+  margin: 0;
+  padding: 0;
+}
+
+.tooltip tr td:nth-child(1) {
+  width: 50px;
+}
+
+.tooltip tr td:nth-child(2) {
+  text-align: center;
+}
+
+/* -------------
+  Activity Levels
+------------- */
+.account-percentage-bar-container {
+  margin-bottom: 10px;
+  padding: 0 15px;
+}
+
+.activity-level-account-value,
+.activity-level-contact-value {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.activity-level-account-value td:first-child,
+.activity-level-contact-value td:first-child {
+  color: #EEE;
+  padding-right: 30px;
+}
+
+.activity-level-item {
+  padding: 0 30px 0 15px;
+}
+
+.activity-level-indicator-col,
+.activity-level-text-col {
+  display: inline-block;
+  width: 50%;
+}
+
+.activity-level-indicator-col {
+  text-align: right;
+}
+
+.activity-level-text-col {
+  vertical-align: top;
+}
+
+.activity-level-title {
+  color: #0196D8;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* -------------
+  Bar Chart
+------------- */
+#bar-chart {
+  padding: 0 15px;
+}
+
+#bar-chart rect:hover {
+  opacity: 0.8;
+}
+
+#bar-chart-legend {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.bar-chart-legend-color-label {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  margin-left: 20px;
+}
+
+.bar-chart-legend-item {
+  display: inline-block;
+}
+
+.bar-chart-legend-item:first-child .bar-chart-legend-color-label {
+  margin-left: 0;
+}
+
+.bar-chart-legend-text-label {
+  color: #EEE;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.axis line {
+  fill: none;
+  stroke: none;
+}
+
+.axis path {
+  fill: none;
+  stroke: #DDD;
+}
+
+.axis text {
+  fill: #FFF;
+  font-size: 12px;
+}
+
+.axis-label {
+  fill: #FFF;
+  font-weight: bold;
+}
+
+/* -------------
+  Bubble Chart
+------------- */
+#bubble-chart circle:hover {
+  opacity: 0.8;
+}
+
+/* -------------
+  Doughnut Chart
+------------- */
+.doughnut-arc-path:hover {
+  opacity: 0.9;
+}
+
+#doughnut-chart-container {
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+#doughnut-chart-description {
+  background-color: #265A93;
+  box-shadow: 0 0 10px #000;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 0;
+}
+
+/* -------------
+  Filters
+------------- */
+.active-filter::after {
+  background-color: #265A93;
+  border-radius: 50%;
+  color: #DDD;
+  content: "\00D7";
+  font-size: 16px;
+  font-weight: bold;
+  height: calc(50% + 8px);
+  left: 0;
+  padding-top: calc(50% - 8px);
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+
+.chart-option-container {
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+#filter-container {
+  background-color: #1D4D7D;
+  box-shadow: 0 0 5px #000;
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.filter-icon {
+  display: block;
+  width: 100%;
+}
+
+.filter-icon-container {
+  border: 1px solid #FFF;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+#filter-icons-bottom-left {
+  bottom: 10px;
+  left: 25px;
+  position: absolute;
+  width: 7%;
+}
+
+#filter-icons-top-left {
+  left: 25px;
+  position: absolute;
+  top: 10px;
+  width: 7%;
+}
+
+#filter-label-bottom-left {
+  color: #FFF;
+  font-size: 12px;
+  font-weight: bold;
+  left: 5px;
+  position: absolute;
+  top: calc(100% - 10px);
+  transform: rotate(-90deg);
+  transform-origin: 0 0;
+}
+
+#filter-label-top-left {
+  color: #FFF;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+  right: calc(100% - 5px);
+  top: 10px;
+  transform: rotate(-90deg);
+  transform-origin: 100% 0;
+}
+
+/* -------------
+  Geo Chart
+------------- */
+#geo-chart {
+  filter: drop-shadow( 0 0 3px #000 );
+}
+
+#geo-chart-container {
+  background-color: #12385F;
+  overflow: hidden;
+  position: absolute;
+  width: 0; /* This is to make sure the element does not show until it gets sized in the script */
+}
+
+#geo-chart-scale {
+  color: #DDD;
+  text-align: center;
+}
+
+.geo-chart-scale-bound {
+  font-size: 0;
+}
+
+.geo-chart-scale-bound:last-child {
+  margin-left: 20%;
+}
+
+#geo-chart-scale-gradient {
+  background: linear-gradient(to right, #168DC6, #88A52C);
+  box-shadow: 0 0 3px #000;
+  width: 50%;
+}
+
+#geo-chart-scale-label {
+  font-size: 0;
+  font-weight: bold;
+}
+
+.state {
+  fill: none;
+  stroke: #555;
+  stroke-width: 1;
+}
+
+.state:hover {
+  fill-opacity: 0.5;
+}
+
+/* -------------
+  Side Menu
+------------- */
+#side-menu {
+  background-color: #23507B;
+  color: #EEE;
+  left: -200px;
+  padding-top: 30px;
+  position: absolute;
+  width: 200px;
+}
+
+#side-menu-nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu-nav-item {
+  border-bottom: 0.5px dotted #777;
+  border-top: 0.5px dotted #777;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.side-menu-nav-item > a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.side-menu-nav-item:hover {
+  color: #029AD8;
+}
+
+.side-menu-nav-item.active {
+  padding-right: 7px;
+  border-right: 3px solid #FFF;
+}
+
+.side-menu-sub-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.side-menu-sub-menu-item {
+  padding: 10px;
+  background-color: #1C3F61;
+}
+
+.side-menu-sub-menu-item > a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+#user-profile {
+  background-color: #DDD;
+  border-radius: 50px;
+  height: 100px;
+  margin: auto;
+  margin-bottom: 30px;
+  width: 100px;
+}
+
+/* -------------
+  Buttons
+------------- */
+.button-bar {
+  padding: 10px;
+}
+
+#right-container .button-bar {
+  text-align: right;
+}
+
+.button-top-left {
+  background-color: #265A93;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 0 3px;
+  outline: 0;
+  padding: 5px;
+  padding-bottom: 0;
+}
+
+.button-top-left:hover {
+  cursor: pointer;
+}
+
+#help-button {
+  background-color: #265A93;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #000;
+  color: #FFF;
+  font-size: 25px;
+  padding-bottom: 0.5px;
+  text-align: center;
+  vertical-align: top;
+  width: 35px;
+}
+
+.menu-icon-bar {
+  background-color: #FFF;
+  height: 5px;
+  margin-bottom: 5px;
+  width: 25px;
+}
+
+#settings-button {
+  background-color: #265A93;
+  border: 0;
+  border-radius: 3px;
+  box-shadow: 0 0 3px #000;
+  color: #FFF;
+  font-size: 24px;
+  margin-left: 10px;
+  padding-bottom: 2px;
+  text-align: center;
+  vertical-align: top;
+  width: 35px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Executive Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <div id="left-container">
+    <div class="button-bar">
+      <button id="menu-button" class="button-top-left">
+        <div class="menu-icon-bar"></div>
+        <div class="menu-icon-bar"></div>
+        <div class="menu-icon-bar"></div>
+      </button>
+    </div>
+	<div class="activity-level-item">
+	  <div class="activity-level-text-col">
+	    <p class="activity-level-title">ACTIVE</p>
+	    <table>
+	      <tr class="activity-level-account-value"><td>Accounts</td></tr>
+	      <tr class="activity-level-contact-value"><td>Contacts</td></tr>
+	    </table>
+	  </div><div class="activity-level-indicator-col">
+	    <svg class="account-score-indicator"></svg>
+	  </div>
+	</div>
+	<div class="account-percentage-bar-container">
+	  <svg class="account-percentage-bar"></svg>
+	</div>
+	<div class="activity-level-item">
+	  <div class="activity-level-text-col">
+	    <p class="activity-level-title">HIBERNATING</p>
+	    <table>
+	      <tr class="activity-level-account-value"><td>Accounts</td></tr>
+	      <tr class="activity-level-contact-value"><td>Contacts</td></tr>
+	    </table>
+	  </div><div class="activity-level-indicator-col">
+	    <svg class="account-score-indicator"></svg>
+	  </div>
+	</div>
+	<div class="account-percentage-bar-container">
+	  <svg class="account-percentage-bar"></svg>
+	</div>
+	<div class="activity-level-item">
+	  <div class="activity-level-text-col">
+	    <p class="activity-level-title">INACTIVE</p>
+	    <table>
+	      <tr class="activity-level-account-value"><td>Accounts</td></tr>
+	      <tr class="activity-level-contact-value"><td>Contacts</td></tr>
+	    </table>
+	  </div><div class="activity-level-indicator-col">
+	    <svg class="account-score-indicator"></svg>
+	  </div>
+	</div>
+	<div class="account-percentage-bar-container">
+	  <svg class="account-percentage-bar"></svg>
+	</div>
+	<div id="bar-chart-legend"></div>
+	<div id="bar-chart-container">
+	  <svg id="bar-chart"></svg>
+	</div>
+	<div id="bar-chart-tooltip" class="tooltip"></div>
+  </div>
+  <div id="right-container">
+    <div class="button-bar">
+      <button id="help-button">&#10067;
+      </button><button id="settings-button">&#9965;</button>
+    </div>
+    <svg id="bubble-chart"></svg>
+  </div>
+  <div id="bubble-chart-tooltip" class="tooltip"></div>
+  <div id="filter-container">
+    <span id="filter-label-top-left">FILTERS</span>
+    <div id="filter-icons-top-left">
+      <div class="filter-icon-container"><img class="filter-icon" src="images/Fred.png" alt="F"></div>
+      <div class="filter-icon-container"><img class="filter-icon" src="images/job-function-icon.png" alt="J"></div>
+      <div class="filter-icon-container"><img class="filter-icon" src="images/data-source-type.png" alt="D"></div>
+    </div>
+    <span id="filter-label-bottom-left">BAR CHART OPTIONS</span>
+    <div id="filter-icons-bottom-left">
+      <div class="chart-option-container"><div class="chart-option">Y</div></div>
+      <div class="chart-option-container"><div class="chart-option">B</div></div>
+      <div class="chart-option-container"><div class="chart-option">M</div></div>
+    </div>
+  </div>
+  <div id="filter-tooltip" class="tooltip"></div>
+  <div id="doughnut-chart-description">
+    <p class="chart-heading">By Account Score</p>
+    <svg id="doughnut-legend"></svg>
+  </div>
+  <div id="doughnut-chart-container">
+    <svg id="doughnut-chart"></svg>
+  </div>
+  <div class="tooltip" id="doughnut-chart-tooltip"></div>
+  <div id="geo-chart-container">
+    <p class="chart-heading">By Location</p>
+    <svg viewbox="0 0 960 600" width="100%" id="geo-chart"></svg>
+    <div id="geo-chart-scale">
+      <span id="geo-chart-scale-label">Number of Accounts</span>
+      <div id="geo-chart-scale-gradient"></div>
+      <span class="geo-chart-scale-bound">Low</span>
+      <span class="geo-chart-scale-bound">High</span>
+    </div>
+  </div>
+  <div id="side-menu">
+    <div id="user-profile"></div>
+    <ul id="side-menu-nav">
+      <li class="side-menu-nav-item active"><a href="landing-page.html">Data</a></li>
+        <ul class="side-menu-sub-menu">
+          <li class="side-menu-sub-menu-item"><a href="data-health.html">Data Health</a></li>
+          <li class="side-menu-sub-menu-item"><a href="project-manager.html">Project Manager</a></li>
+          <li class="side-menu-sub-menu-item"><a href="source-manager.html">Source Manager</a></li>
+        </ul>
+      <li class="side-menu-nav-item"><a href="analytics.html">Analytics</a></li>
+      <li class="side-menu-nav-item">Admin</li>
+    </ul>
+  </div>
+  <div class="tooltip" id="geo-chart-tooltip"></div>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Health</title>
+  <link rel="stylesheet" href="data-health.css">
+</head>
+<body>
+  <div id="menu-icon">
+    <div class="menu-icon-bar"></div>
+    <div class="menu-icon-bar"></div>
+    <div class="menu-icon-bar"></div>
+  </div>
+  <div id="treemap-container">
+    <div id="carrot-container"><span id="categories">Categories</span></div>
+    <svg id="treemap" width="100%" height="calc(100% - 28.5px)"></svg>
+  </div>
+  <div id="right-col"></div>
+  <div id="side-menu">
+    <div id="user-profile"></div>
+    <ul id="side-menu-nav">
+      <li class="side-menu-nav-item active"><a href="landing-page.html">Data</a></li>
+        <ul class="side-menu-sub-menu">
+          <li class="side-menu-sub-menu-item"><a href="data-health.html">Data Health</a></li>
+          <li class="side-menu-sub-menu-item"><a href="project-manager.html">Project Manager</a></li>
+          <li class="side-menu-sub-menu-item"><a href="source-manager.html">Source Manager</a></li>
+        </ul>
+      <li class="side-menu-nav-item">Analytics</li>
+      <li class="side-menu-nav-item">Admin</li>
+    </ul>
+  </div>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="data-health.js"></script>
+</body>
+</html>
