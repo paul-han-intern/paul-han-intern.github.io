@@ -12,15 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   
   const industries = ["Energy", "Finance", "Health Care", "IT"],
-    companies = ["Ameren", "NRG", "NextEra", "PPL", "Duke Energy", "Engie", "National Grid", "EDF", "Enel", "Dominion Energy",
+    companies = ["Ameren", "NextEra", "PPL", "Duke Energy", "Engie", "National Grid", "EDF", "Enel", "Dominion Energy",
       "Pacific Gas and Electric", "Southern California Edison", "Consolidated Edison", "Georgia Power", "DTE Energy",
       "Consumers Energy", "Unisource Energy", "Xcel Energy", "Avangrid", "Ambit Energy", "Wells Fargo", "Bank of America",
       "Chase", "Goldman Sachs", "Citigroup", "Morgan Stanley", "PNC", "Capital One", "TD Bank",
       "Barclays", "McKesson", "CVS Health", "UnitedHealth Group", "AmerisourceBergen", "Express Scripts", "Cardinal Health",
-      "Walgreens Boots Alliance", "Johnson & Johnson", "Anthem", "Aetna", "Apple", "Samsung", "Amazon", "Foxconn", "Google",
+      "Walgreens Boots Alliance", "Johnson & Johnson", "Anthem", "Apple", "Samsung", "Amazon", "Foxconn", "Google",
       "Microsoft", "Hitachi", "IBM", "Huawei", "Sony", "US Bancorp", "HSBC", "State Street", "Charles Schwab", "BB&T",
       "Credit Suisse", "SunTrust Bank", "Deutsche Bank", "Ally Financial", "American Express", "21st Century Insurance", "AARP",
-      "Berkshire Hathaway", "Blue Advantage", "Blue Cross Blue Shield", "Fortis", "Kaiser Permanente", "Kaleida Health", "LifeWise",
+      "Berkshire Hathaway", "Blue Advantage", "Blue Cross Blue Shield", "Fortis", "Kaiser Permanente", "Kaleida Health",
       "Thrivent Financial", "Falafel Software", "Forsythe", "Impinj"],
     personas = ["Fred", "Pippen", "Penny", "Sue"],
     activityLevels = ["Active", "Hibernating", "Inactive"];
