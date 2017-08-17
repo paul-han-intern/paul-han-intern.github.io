@@ -1,0 +1,16 @@
+.horizontal-bar-chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.job-axis text {
+  font-family: Tahoma;
+  font-size: 14px;
+  fill: #ddd;
+}
+
+.job-axis path {
+  fill: none;
+  stroke: #ddd;
+}

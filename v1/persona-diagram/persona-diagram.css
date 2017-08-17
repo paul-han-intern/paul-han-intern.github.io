@@ -1,0 +1,30 @@
+p {
+  padding: 0;
+  margin: 0;
+}
+
+.persona-item {
+  width: calc(100% - 20px);
+  padding: 10px;
+}
+
+.persona-thumbnail {
+  width: 65px;
+  float: left;
+  margin-right: 20px;
+}
+
+.persona-name {
+  font-weight: bold;
+  font-size: .9em;
+  color: #2DA3D1;
+}
+
+.persona-value {
+  font-size: .8em;
+  margin-top: 5px;
+}
+
+.persona-value-label {
+  margin-right: 20px;
+}

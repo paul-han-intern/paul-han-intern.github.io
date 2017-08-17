@@ -1,0 +1,23 @@
+.vertical-bar-chart rect {
+  fill: #0196D8;
+}
+
+.vertical-bar-chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: middle;
+}
+
+.axis text {
+  font: 10px sans-serif;
+  fill: #fff;
+}
+
+.axis path {
+  fill: none;
+  stroke: #fff;
+}
+
+.axis line {
+  visibility: hidden;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Geo Chart</title>
+  <link rel="stylesheet" href="geo-chart.css">
+</head>
+<body>
+  <div id="tooltip"></div>
+  <svg viewbox="0 0 960 600" width="400" id="statesvg"></svg><div class="chart"></div>
+  <div>
+    <p>Number of Accounts</p>
+    <div class="gradient-scale"></div>
+    <span class="gradient-lower-bound">Low</span>
+    <span>High</span>
+  </div>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="states.js"></script>
+  <script src="geo-chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Source Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <ul class="navbar">
+    <li class="navitem active">Data</li>
+      <ul class="sub-navbar">
+        <li class="sub-navitem"><a class="navitem-link" href="data-health.html">Data Health</a></li>
+        <li class="sub-navitem"><a class="navitem-link" href="source-manager.html">Source Manager</a></li>
+        <li class="sub-navitem"><a class="navitem-link" href="project-manager.html">Project Manager</a></li>
+      </ul>
+    <li class="navitem">Analytics</li>
+    <li class="navitem">Admin</li>
+  </ul>
+  <div class="float-box new-source">
+    <p class="float-box-title">Add New Source</p>
+    <div class="float-box-body">
+      <button id="new-source-upload-button" class="action-button">Upload</button>
+    </div>
+  </div>
+  <div id="new-source-upload-menu" style="visibility: hidden;">
+    <div id="upload-menu-box">
+      <div id="upload-menu-within-border">
+        <img id="upload-menu-icon" src="http://www.free-icons-download.net/images/upload-logo-icon-61335.png">
+        <p id="upload-menu-directions">Choose a file or drag it here</p>
+      </div>
+    </div>
+  </div>
+  <script src="showHideUploadMenu.js"></script>
+</body>
+</html>

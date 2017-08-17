@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="geo-chart/geo-chart.css">
+  <link rel="stylesheet" href="job-function-bar/job-function-bar.css">
+  <link rel="stylesheet" href="account-score-bar/account-score-bar.css">
+  <title>Executive Dashboard</title>
+</head>
+<body>
+  <ul class="navbar">
+    <li class="navitem active">Data</li>
+      <ul class="sub-navbar">
+        <li class="sub-navitem"><a class="navitem-link" href="data-health.html">Data Health</a></li>
+        <li class="sub-navitem"><a class="navitem-link" href="source-manager.html">Source Manager</a></li>
+        <li class="sub-navitem"><a class="navitem-link" href="project-manager.html">Project Manager</a></li>
+      </ul>
+    <li class="navitem">Analytics</li>
+    <li class="navitem">Admin</li>
+  </ul>
+  <div class="box-row">
+    <div class="box">
+      <p class="box-title">Total Accounts</p>
+      <p id="account-sum" class="condensed-number"></p>
+    </div>
+    <div class="box account-box">
+      <div class="value-text">
+        <p class="box-title">Active</p>
+        <p class="condensed-number account-value"></p>
+      </div>
+      <div class="account-value-bar"></div>
+    </div>
+    <div class="box account-box">
+      <div class="value-text">
+        <p class="box-title">Hibernating</p>
+        <p class="condensed-number account-value"></p>
+      </div>
+      <div class="account-value-bar"></div>
+    </div>
+    <div class="box account-box">
+      <div class="value-text">
+        <p class="box-title">Inactive</p>
+        <p class="condensed-number account-value"></p>
+      </div>
+      <div class="account-value-bar"></div>
+    </div>
+  </div>
+  <div class="chart-box-row">
+    <div class="chart-box narrow positive">
+      <p class="box-title">By Account Score</p>
+      <div id="pie-tooltip"></div>
+      <svg class="doughnut"></svg>
+    </div>
+    <div class="chart-box narrow negative">
+      <p class="box-title">By Persona</p>
+      <div id="persona-diagram">
+        <div class="persona-item">
+          <img class="persona-thumb pippen" src="persona-diagram/images/Pippen.png" alt="Pippen">
+          <div class="score-block">
+            <p class="active-label">Active</p>
+            <p class="activity-score">97.6</p>
+          </div>
+          <div class="score-block">
+            <p class="hibernating-label">Hibernating</p>
+            <p class="activity-score">47%</p>
+          </div>
+          <div class="score-block">
+            <p class="inactive-label">Inactive</p>
+            <p class="activity-score">11%</p>
+          </div>
+        </div>
+        <div class="persona-item penny">
+          <img class="persona-thumb" src="persona-diagram/images/Penny.png" alt="Penny">
+          <div class="score-block">
+            <p class="active-label">Active</p>
+            <p class="activity-score">81.2</p>
+          </div>
+          <div class="score-block">
+            <p class="hibernating-label">Hibernating</p>
+            <p class="activity-score">73%</p>
+          </div>
+          <div class="score-block">
+            <p class="inactive-label">Inactive</p>
+            <p class="activity-score">8%</p>
+          </div>
+        </div>
+        <div class="persona-item">
+          <img class="persona-thumb fred" src="persona-diagram/images/Fred.png" alt="Fred">
+          <div class="score-block">
+            <p class="active-label">Active</p>
+            <p class="activity-score">54.4</p>
+          </div>
+          <div class="score-block">
+            <p class="hibernating-label">Hibernating</p>
+            <p class="activity-score">12%</p>
+          </div>
+          <div class="score-block">
+            <p class="inactive-label">Inactive</p>
+            <p class="activity-score">24%</p>
+          </div>
+        </div>
+        <div class="persona-item sue">
+          <img class="persona-thumb" src="persona-diagram/images/Sue.png" alt="Sue">
+          <div class="score-block">
+            <p class="active-label">Active</p>
+            <p class="activity-score">54.4</p>
+          </div>
+          <div class="score-block">
+            <p class="hibernating-label">Hibernating</p>
+            <p class="activity-score">12%</p>
+          </div>
+          <div class="score-block">
+            <p class="inactive-label">Inactive</p>
+            <p class="activity-score">24%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chart-box wide positive">
+      <p class="box-title">By Function</p>
+      <div class="legend">
+        <div class="color-block series-1"></div>
+        <span class="color-label">Pippen</span>
+        <div class="color-block series-2"></div>
+        <span class="color-label">Fred</span>
+        <div class="color-block series-3"></div>
+        <span class="color-label">Penny</span>
+        <div class="color-block series-4"></div>
+        <span class="color-label">Heather</span>
+        <div class="color-block series-5"></div>
+        <span class="color-label">No Persona</span>
+      </div>
+      <svg class="horizontal-bar-chart"></svg>
+    </div>
+  </div>
+  <div class="chart-box-row">
+    <div class="chart-box narrow negative">
+      <p class="box-title">By Location</p>
+      <div class="map">
+        <div id="tooltip"></div>
+        <svg viewbox="0 0 960 600" width="100%" height="100%" id="statesvg"></svg><div class="chart"></div>
+      </div>
+      <div class="map-scale">
+        <span class="scale-label">Number of Accounts</span>
+        <div class="gradient-scale"></div>
+        <span class="gradient-lower-bound">Low</span>
+        <span class="gradient-upper-bound">High</span>
+      </div>
+    </div>
+    <div class="chart-box narrow positive">
+      <p class="box-title">By Data Source</p>
+      <svg class="vertical-bar-chart"></svg>
+    </div>
+    <div class="chart-box wide negative">
+      <p class="box-title">By Industry</p>
+      <svg class="galaxy-chart"></svg>
+    </div>
+  </div>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="random-stats.js"></script>
+  <script src="condensed-numbers.js"></script>
+  <script src="geo-chart/states.js"></script>
+  <script src="geo-chart/geo-chart.js"></script>
+  <script src="job-function-bar/job-function-bar.js"></script>
+  <script src="account-score-bar/account-score-bar.js"></script>
+  <script src="data-source-pie/data-source-pie.js"></script>
+  <script src="galaxy-chart/new.js"></script>
+</body>
+</html>
